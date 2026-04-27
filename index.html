@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slime Elemental Prototype</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: #0b1020;
+        color: #e9ecff;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+      #app {
+        height: 100%;
+        display: grid;
+        place-items: center;
+      }
+      .frame {
+        width: min(1100px, 100vw);
+        height: min(680px, 100vh);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .hint {
+        position: fixed;
+        left: 12px;
+        bottom: 12px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        background: rgba(20, 26, 55, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 12px;
+        line-height: 1.4;
+        backdrop-filter: blur(8px);
+        max-width: 460px;
+      }
+      .hint b {
+        color: #ffffff;
+      }
+      .hint code {
+        color: #b8c0ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="game" class="frame"></div>
+    </div>
+    <div class="hint">
+      <div><b>Move</b>: <code>WASD</code> / <code>Arrow</code> — <b>Ranged</b>: <code>Space</code> — <b>Melee</b>: <code>F</code></div>
+      <div><b>Skills</b>: <code>1-5</code> (mở theo nguyên tố khi hạ địch)</div>
+      <div><b>Dash</b>: <code>Shift</code></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+
